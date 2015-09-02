@@ -1,6 +1,6 @@
-# DECO3800 - Frontend
+# DECO3801 - Frontend
 
-This is the frontend part of the application. The API (backend) is located here: https://github.com/bjwood/deco3800-be
+This is the frontend part of the application.
 
 ### Pre-requisites
 
