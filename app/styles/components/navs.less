@@ -1,0 +1,53 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+    > li > a {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Pills
+// -------------------------
+.nav-pills {
+    > li > a:hover {
+        color: @nav-pills-active-link-hover-color;
+    }
+}
+
+
+// Stacked pills
+.nav-stacked {
+    margin-bottom: @line-height-computed;
+
+    > li > a {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            height: 20px;
+            width: 20px;
+
+            background-image: url(/img/nav/arrow-left.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+
+            content: '';
+        }
+    }
+
+    > li + li {
+        border-top: 1px solid @gray-lighter;
+    }
+}

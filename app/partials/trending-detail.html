@@ -1,0 +1,23 @@
+<div class="container trending-detail">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2 class="panel-title">#{{ ctrl.trendingThreat }}</h2>
+				</div>
+				<div class="panel-body">
+					<div class="post" ng-repeat="post in ctrl.posts">
+						<p class="post-message">{{ post.message }}</p>
+						<div class="post-author">
+							<a class="post-link" href="{{ post.url }}" target="_blank">View</a>
+							by {{ post.name }} via {{ post.platform }}
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer text-center">
+					<a class="btn btn-default" ui-sref="app.dashboard">Back</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

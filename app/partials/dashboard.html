@@ -1,0 +1,58 @@
+<div class="container dashboard">
+	<div class="row">
+		<div class="col-sm-4 col-md-3">
+			<ul class="nav nav-pills nav-stacked">
+				<li><a ui-sref="app.dashboard">Dashboard</a></li>
+				<li><a href="#">Barometer</a></li>
+				<li><a href="#">Timeline</a></li>
+				<li><a href="#">Heatmap</a></li>
+				<li><a href="#">Mention</a></li>
+				<li><a href="#">Alert</a></li>
+				<li><a href="#">CERTcurity Settings</a></li>
+			</ul>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Overall Sentiment</h3>
+				</div>
+				<div class="panel-body panel-body-full">
+					<div id="piechart"></div>
+					<!-- <img src="http://img3.wikia.nocookie.net/__cb20130722115116/onepiece/images/8/8a/Straw_Hat_Pirates_as_a_Family.png"> -->
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Threat Locations</h3>
+				</div>
+				<div class="panel-body panel-body-full">
+					<div id="map_canvas">
+						<img src="http://deco3801-codeword.uqcloud.net/img/map.png" style="width:100%; height:100px;">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    <div class="col-sm-8 col-md-9">
+		    <div class="panel panel-primary">
+			    <div class="panel-heading">
+				    <h3 class="panel-title">Threats Summary</h3>
+			    </div>
+			    <div class="panel-body panel-body-full">
+			    	<div id="curve_chart" style="width: 100%; height: 280px"></div>
+			    </div>
+		    </div>
+		    
+			<div class="panel panel-primary">
+			    <div class="panel-heading">
+				    <h3 class="panel-title">Trending Threats</h3>
+			    </div>
+			    <div class="panel-body">
+			    	<div ng-repeat="trending_threat in ctrl.trending_threats">
+				    	<a ui-sref="app.trending-detail({ 'threat': trending_threat })">#{{ trending_threat }}</a>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+</div>
